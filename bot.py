@@ -43,6 +43,8 @@ time.sleep(1)
 
 
 while True:
+	print(Colorate.Vertical(Colors.blue_to_red, banner, 2))
+	print(Colorate.Vertical(Colors.red_to_blue, banner_2, 2))
 	print (Link)
 	loop = input("\n \nPress [Enter] to stop server\n Type [C] to clear the terminal\n Type [serveo] to expose to the internet\n :")
 	loop = loop.lower()
