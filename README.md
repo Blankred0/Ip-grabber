@@ -1,5 +1,5 @@
 # Ip-grabber
-This is a simple Ip graber made in php.
+This is a simple Ip graber made in php.You have to send the link to your target and the php file gonna take the information and redirect it instantly on another website of your choice.
 To use it, run the commands who follows:
 ```bash
 git clone https://github.com/Blankred0/Ip-grabber
