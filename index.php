@@ -1,6 +1,6 @@
 <?php
  
-//IP Grabber
+//IP Grabber made by https://github.com/Blankred0
  
 //Variables
 $redirection_url = file_get_contents("redirect_url.txt"); // Get the link
