@@ -13,6 +13,35 @@ $port = $_SERVER['REMOTE_PORT'];
 $agent = $_SERVER['HTTP_USER_AGENT'];
 $ref = $_SERVER['HTTP_REFERER'];
 $hostname = gethostbyaddr($_SERVER['REMOTE_ADDR']);
+$screenSize = isset($_SERVER['HTTP_CLIENT_HD']) ? $_SERVER['HTTP_CLIENT_HD'] : 'Not available';
+$language = isset($_SERVER['HTTP_ACCEPT_LANGUAGE']) ? $_SERVER['HTTP_ACCEPT_LANGUAGE'] : 'Not available';
+
+$os = 'Unknown';
+if (preg_match('/\((.*?)\)/', $agent, $matches)) {
+    $os = $matches[1];
+}
+
+$browser = 'Unknown';
+if (preg_match('/(?:MSIE|Trident\/.*; rv:)(\d+)/', $agent)) {
+    $browser = 'Internet Explorer';
+} elseif (preg_match('/Firefox\/(\d+)/', $agent)) {
+    $browser = 'Firefox';
+} elseif (preg_match('/Chrome\/(\d+)/', $agent)) {
+    $browser = 'Chrome';
+} elseif (preg_match('/Safari\/(\d+)/', $agent)) {
+    $browser = 'Safari';
+} elseif (preg_match('/Opera\/(\d+)/', $agent)) {
+    $browser = 'Opera';
+}
+$deviceType = 'Unknown';
+if (preg_match('/Mobile|Android|iPhone|iPad|iPod/', $agent)) {
+    $deviceType = 'Mobile';
+} elseif (preg_match('/Tablet|iPad/', $agent)) {
+    $deviceType = 'Tablet';
+} else {
+    $deviceType = 'Desktop';
+}
+
 
 //This part can be modified as you want
 $geo_url = "http://ip-api.com/json/" . $ip2;
@@ -35,6 +64,11 @@ fwrite($fh, 'Hostname: '."".$hostname ."\n");
 fwrite($fh, 'Port Number: '."".$port ."\n");
 fwrite($fh, 'User Agent: '."".$agent ."\n");
 fwrite($fh, 'HTTP Referer: '."".$ref ." \n");
+fwrite($fh, 'Screen size: '."".$screenSize ." \n");
+fwrite($fh, 'Language: '."".$language ." \n");
+fwrite($fh, 'Os: '."".$os ." \n");
+fwrite($fh, 'Browser: '."".$browser ." \n");
+fwrite($fh, 'DeviceType: '."".$deviceType ." \n");
 fwrite($fh, "Latitude : " . $latitude . "\n");
 fwrite($fh, "Longitude : " . $longitude . "\n");
 fwrite($fh, "Country : " . $country . "\n");
