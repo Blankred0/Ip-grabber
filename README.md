@@ -4,6 +4,7 @@ To use it, run the commands who follows:
 ```bash
 git clone https://github.com/Blankred0/Ip-grabber
 cd Ip-grabber
+pip install -r requirements.txt
 python3 bot.py
 ```
 It will generate a link for you to view your PHP file in your web browser. `example : localhost:28708`
@@ -21,12 +22,11 @@ You can choose the subdomain by genrating a ssh key with this command :
 Otherwhise the choose subdomain won't work and he choose you a random subdomain.
 
 
-#Tip: Make sure you have PHP and pyfiglet installed on your computer. :)
-For pyfiglet it's `pip install pyfiglet`
+#Tip: Make sure you have PHP installed on your computer.
 For serveo make sure you have open ssh installed.
 If you don't have open ssh installed run the folowing command :
 
-For ubutu it's : 
+For debian it's : 
 ```bash
 sudo apt-get update 
 sudo apt-get install openssh-server
