@@ -10,7 +10,7 @@ python3 bot.py
 It will generate a link for you to view your PHP file in your web browser. `example : localhost:28708`
 Then type `serveo` in the menu.
 Press ctrl + c to stop the server and 'C' to clear the terminal.
-You can avoid your server to crash with `sleep.py` because it refresh the page every 2 min. Run :
+You can avoid your server to power off with `sleep.py` because it refresh the page every 2 min. Run :
 ```bash
 python3 sleep.py  
 https://yoursubdomain.serveo.net/
