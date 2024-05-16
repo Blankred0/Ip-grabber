@@ -6,7 +6,11 @@ import requests
 try:
 	import pyfiglet
 except:
-	print ("You must have pyfiglet install ! (pip install pyfiglet)")
+	print("You must have pyfiglet installed ! ($ pip install -r requirements.txt)")
+try:
+	from pystyle import *
+except:
+	print("You must have pystyle installed ! ($ pip install -r requirements.txt)")
 red = Col.light_red
 banner = pyfiglet.figlet_format("Ip\nGrabber")
 banner_2 = "╔═════════════════════════════════╗\n║ Copyright by Blankred0          ║\n║ https://github.com/Blankred0    ║\n╚═════════════════════════════════╝"
