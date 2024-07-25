@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ./files
+python3 bot.py
