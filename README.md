@@ -33,6 +33,9 @@ For debian it's :
 sudo apt-get update 
 sudo apt-get install openssh-server
 ```
+I've just added a index.php with a webhook, feel free to use it.
+Install `php-curl` or it wont work.
+
 There is maybe some bug, if you find some please tell me thanks :).
 
 ONLY USE THE `./reset` IF YOU WANT TO DELETE ALL THE LOGS.
